@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Proyecto - Dev-Ware</title>
+    
+    <!-- Iconos y Estilos -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/splide@3.6.9/dist/css/splide.min.css">
+</head>
+<body>
+
+    <!-- Botón de Regreso -->
+    <header class="header">
+        <a href="/index.html#portfolio" class="back-link">
+            <i class='bx bx-left-arrow-alt'></i> Regresar a Portafolio
+        </a>
+    </header>
+
+    <section class="project-details">
+        <h2 class="heading">Proyecto <span>NumenR</span></h2>
+    
+        <!-- Scroll horizontal con imágenes -->
+        <div class="image-scroll" id="image-scroll">
+            <img src="img/01.png" alt="Vista 1" onclick="openModal(this.src)">
+            <img src="img/02.png" alt="Vista 2" onclick="openModal(this.src)">
+            <img src="img/03.png" alt="Vista 3" onclick="openModal(this.src)">
+            <img src="img/04.png" alt="Vista 4" onclick="openModal(this.src)">
+            <img src="img/05.png" alt="Vista 5" onclick="openModal(this.src)">
+            <img src="img/06.png" alt="Vista 6" onclick="openModal(this.src)">
+            <img src="img/07.png" alt="Vista 7" onclick="openModal(this.src)">
+            <img src="img/08.png" alt="Vista 8" onclick="openModal(this.src)">
+            <img src="img/09.png" alt="Vista 9" onclick="openModal(this.src)">
+            <img src="img/10.png" alt="Vista 10" onclick="openModal(this.src)">
+            <img src="img/11.png" alt="Vista 11" onclick="openModal(this.src)">
+        </div>
+    
+        <!-- Flechas de navegación -->
+        <div class="scroll-arrow left" onclick="scrollLeft()">&lt;</div>
+        <div class="scroll-arrow right" onclick="scrollRight()">&gt;</div>
+
+        <!-- Descripción del Proyecto -->
+        <div class="project-description">
+            <h3>Aplicación de Escritorio para Tienda de Ropa</h3>
+            <p>
+                Esta aplicación fue diseñada para satisfacer las necesidades de una tienda de ropa,
+                proporcionando herramientas avanzadas para gestionar inventarios, ventas, empleados y clientes. 
+                Ofrece funciones esenciales como:
+            </p>
+            <ul>
+                <li>📊 Gestión de inventarios con alertas de stock bajo y recibimiento de productos.</li>
+                <li>📈 Reportes detallados de ventas, ganancias y estados financieros.</li>
+                <li>🖥️ Interfaz amigable y personalizable con roles y permisos configurables.</li>
+                <li>👥 Soporte para múltiples usuarios con capacidades de personalización de perfiles, como cambio de foto, nombre de usuario y contraseña.</li>
+            </ul>
+            <p>
+                El sistema está diseñado para funcionar en una red local, lo que permite conectar múltiples dispositivos 
+                al servidor principal mediante una base de datos centralizada en MySQL. Esto asegura actualizaciones 
+                en tiempo real y la sincronización de datos entre dispositivos móviles y computadoras de escritorio.
+            </p>
+            <p>
+                El desarrollo del proyecto tomó aproximadamente 3 meses, utilizando tecnologías modernas como 
+                <strong>Flutter</strong> para las aplicaciones cliente y <strong>Node.js con Express</strong> para el servidor, 
+                con una base de datos MySQL robusta. Al cliente se le entregó el sistema completo, listo para usar, 
+                junto con una guía detallada y la instalación del software en la computadora servidor.
+            </p>
+            <p>
+                Este proyecto refleja nuestro compromiso de proporcionar soluciones tecnológicas personalizadas 
+                y eficientes para optimizar la gestión empresarial.
+            </p>
+        </div>
+    </section>
+
+    <!-- Modal para Imagen -->
+    <div class="modal" id="image-modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img id="modal-img" class="modal-content" alt="Vista Ampliada">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>&copy; 2025 Dev-Ware. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/splide@3.6.9/dist/js/splide.min.js"></script>
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            modal.style.display = 'flex';
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('image-modal');
+            modal.style.display = 'none';
+        }
+    </script>
+            <script src="script.js"></script>
+</body>
+</html>
